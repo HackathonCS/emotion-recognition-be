@@ -111,7 +111,7 @@ app.get('/return', function (req, res) {
 
 
 
-app.post('/insertEmotion', function(req, res) {
+app.get('/insertEmotion', function(req, res) {
     if (!db) {
         initDb(function(err){});
     }
