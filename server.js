@@ -95,18 +95,7 @@ app.get('/pagecount', function (req, res) {
 
 
 app.post('/insertEmotion', function(req, res) {
-    if (!db) {
-        initDb(function(err){});
-    }
-    if (db) {
-        db.collection("emotions").insertOne(req, function(err, res) {
-            if (err) throw err;
-            console.log(req+" 1 document inserted");
-            return res.send(' emotion insert with success');
-        });
-    } else {
-        res.send('{ pageCount: -1 }');
-    }
+    res.send(' emotion insert with success');
 
 });
 
