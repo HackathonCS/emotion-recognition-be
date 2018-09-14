@@ -94,11 +94,6 @@ app.get('/pagecount', function (req, res) {
 });
 
 
-app.post('/insertEmotion', function(req, res) {
-  
-
-});
-
 // error handling
 app.use(function(err, req, res, next){
   console.error(err.stack);
