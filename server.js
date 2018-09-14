@@ -98,9 +98,9 @@ app.post('/insertEmotion', function(req, res) {
     db.collection.insert(
     {
         writeConcern: "ciao",
-        
+
 })
-    res.send("ciao "+writeConcern);
+    res.send("ciao ");
 
 });
 
