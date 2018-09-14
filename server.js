@@ -103,6 +103,7 @@ app.post('/insertEmotion', function(req, res) {
         db.collection("emotion", function(err, res) {
             if (err) throw err;
             console.log("Collection created!");
+            res.send('Something bad happened!');
     });
     }
 
