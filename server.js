@@ -97,7 +97,7 @@ app.get('/pagecount', function (req, res) {
 app.post('/insertEmotion', function(req, res) {
     db.collection.insert(
     {
-        writeConcern: "ciao",
+        writeConcern: "ciao"
 
 })
     res.send("ciao ");
