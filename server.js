@@ -102,8 +102,7 @@ app.post('/insertEmotion', function(req, res) {
         db.collection("emotions").insertOne(req, function(err, res) {
             if (err) throw err;
             console.log(req+" 1 document inserted");
-            res.send(' emotion insert with success');
-            db.close();
+            return res.send(' emotion insert with success');
         });
     } else {
         res.send('{ pageCount: -1 }');
