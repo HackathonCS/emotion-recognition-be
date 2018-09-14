@@ -94,6 +94,15 @@ app.get('/pagecount', function (req, res) {
 });
 
 
+app.post('/insertEmotion', function(req, res) {
+    db.createCollection('emotion' ,{name:'string'})
+
+    db.collection("emotion", function(err, res) {
+        if (err) throw err;
+        console.log("Collection created!");
+
+});
+
 // error handling
 app.use(function(err, req, res, next){
   console.error(err.stack);
