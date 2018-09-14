@@ -93,20 +93,23 @@ app.get('/pagecount', function (req, res) {
   }
 });
 
-app.get('/returnValue', function (req, res) {
-    // try to initialize the db on every request if it's not already
-    // initialized.
+
+
+app.post('/insertEmotion', function(req, res) {
     if (!db) {
         initDb(function(err){});
     }
     if (db) {
-        db.collection('emotionValue').count(function(err, count ){
-            res.send('{ Michi emotion: enjoy}');
-
+        db.collection("emotions").insertOne(req, function(err, res) {
+            if (err) throw err;
+            console.log(req+" 1 document inserted");
+            res.send(' emotion insert with success');
+            db.close();
         });
     } else {
         res.send('{ pageCount: -1 }');
     }
+
 });
 
 // error handling
