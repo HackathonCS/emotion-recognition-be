@@ -29,13 +29,4 @@ describe('Basic routes tests', function() {
 
     })
 
-    it('POST to /insertEmotion should return 200', function(done){
-        chai.request(reqServer)
-            .post('/insertEmotion')
-            .end(function(err, res) {
-                res.should.have.status(200);
-                done();
-            })
-
-    })
 })
