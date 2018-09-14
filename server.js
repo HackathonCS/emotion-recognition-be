@@ -100,7 +100,7 @@ app.post('/insertEmotion', function(req, res) {
         initDb(function(err){});
     }
     if (db) {
-        db.collection("emotion", function(err, res) {
+        db.collection("emotion", function(res, err) {
             if (err) throw err;
             console.log("Collection created!");
             res.send('Something bad happened!');
